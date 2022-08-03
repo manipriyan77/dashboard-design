@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="side-nav" id="side-nav-bar">
+        <h2>Easywire</h2>
+        <i class="fa-solid fa-xmark" id="close-icon" onclick="closeBtnHandler()"></i>
+        <p class="side-bar-title"><i class="fa-solid fa-house"></i>Home</p>
+        <p class="side-bar-title"><i class="fa-solid fa-clock-rotate-left"></i>History</p>
+        <p class="side-bar-title"><i class="fa-solid fa-scale-balanced"></i>Balances</p>
+        <p class="side-bar-title"><i class="fa-solid fa-credit-card"></i>Cards</p>
+        <p class="side-bar-title"><i class="fa-solid fa-users"></i>Receiptents</p>
+        <p class="side-bar-title"><i class="fa-solid fa-file-invoice"></i>Reports</p>
+        <hr />
+        <p class="side-bar-title"><i class="fa-solid fa-gear"></i>Settings</p>
+        <p class="side-bar-title"><i class="fa-solid fa-circle-question"></i>Help</p>
+        <p class="side-bar-title"><i class="fa-thin fa-shield-check"></i>Privacy</p>
+      </div>
+      <div class="dashboard-content" id="dashboard-content-bar">
+        <i class="fa-solid fa-bars" id="menu-icon"  onclick="openBtnHandler()"></i>
+
+        <div class="input-type-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search Tansactions" class="search-transaction" />
+          <div class="image-details-container">
+            <i class="fa-regular fa-bell"></i>
+            <img src="assets/img/1653425040578.jpg" alt="" />
+            <select name="users" id="users">
+                <option value="Manipriyan">Manipriyan</option>
+              </select>
+          </div>
+        </div>
+        <hr style="width: 82%; margin: auto" />
+        <div class="user-details-container">
+        <div class="user-details-section-1">
+            <img src="assets/img/1653425040578.jpg" alt="">
+            <div>
+                <h3 >Good morning, Manipriyan</h3>
+                <p><span><i class="fa-solid fa-building"></i>Thuraipakkam</span><span class="verified-account"><i class="fa-solid fa-circle-check"></i>verified Account</span></p>
+            </div>
+        </div>
+        <div class="user-details-section-2">
+            <button class="add-money">Add Money</button><button class="send-money">Send Money</button>
+        </div>
+          </div>
+          
+          <!-- <h4>OverView</h4> -->
+          <div class="overview-container">
+            <div class="overview-container-section">
+                <div class="overview-icon-container"><span><i class="fa-solid fa-scale-balanced"></i></span>
+                    <div>
+                <p>Account balance</p>
+            <p>83272934</p></div></div>
+            <a class="view-all">View All</a>
+            </div>
+            <div class="overview-container-section">
+                <div class="overview-icon-container"><span><i class="fa-solid fa-rotate"></i></span>
+                    <div>
+                <p>Account balance</p>
+            <p>83272934</p></div></div>
+            <a class="view-all">View All</a>
+            </div>
+            <div class="overview-container-section">
+                <div class="overview-icon-container"><span><i class="fa-thin fa-circle-check"></i></span>
+                    <div>
+                <p>Account balance</p>
+            <p>83272934</p></div></div>
+            <a class="view-all">View All</a>
+            </div>
+          </div>
+          <div class="recent-activity">
+            <h4>Recent Activity</h4>
+            <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transaction</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="success">
+                            <span>success</span>
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="success">
+                            <span>success</span>
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="processing">
+                          <span>  processing
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr><tr>
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="failed">
+                        <span>    failed</span>
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr><tr>
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="success">
+                            <span>success</span>
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr><tr style="border-bottom: 0px">
+                        <td>
+                            Payment from raj
+                        </td>
+                        <td>$20,000 USD</td>
+                        <td class="success">
+                            <span>success</span>
+                        </td>
+                        <td>
+                            May 5 2020
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
