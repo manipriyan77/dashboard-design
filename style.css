@@ -1,9 +1,11 @@
 body {
   margin: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 
 body .container {
   width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 769px) {
@@ -21,6 +23,13 @@ body .container .side-nav {
   padding-top: 20px;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
+}
+
+@media (max-width: 515px) {
+  body .container .side-nav {
+    height: 100%;
+    overflow-y: scroll;
+  }
 }
 
 body .container .side-nav i {
@@ -69,14 +78,14 @@ body .container .side-nav h2 {
 }
 
 body .container .side-nav hr {
-  color: grey;
+  background-color: grey;
+  border: 0px;
+  height: 1px;
 }
 
 body .container .dashboard-content {
   width: 85%;
-  height: 100vh;
   float: left;
-  position: relative;
 }
 
 @media (max-width: 769px) {
@@ -94,8 +103,8 @@ body .container .dashboard-content {
 
 body .container .dashboard-content #menu-icon {
   position: relative;
-  top: 27px;
-  left: 15px;
+  top: 35px;
+  left: 10px;
 }
 
 body .container .dashboard-content .input-type-bar {
@@ -134,6 +143,12 @@ body .container .dashboard-content .input-type-bar .search-transaction {
   background: transparent;
 }
 
+@media (max-width: 515px) {
+  body .container .dashboard-content .input-type-bar .search-transaction {
+    width: 75%;
+  }
+}
+
 body .container .dashboard-content .input-type-bar .image-details-container {
   width: 15%;
   display: -webkit-box;
@@ -142,9 +157,15 @@ body .container .dashboard-content .input-type-bar .image-details-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 515px) {
+  body .container .dashboard-content .input-type-bar .image-details-container {
+    width: 25%;
+  }
 }
 
 body .container .dashboard-content .input-type-bar .image-details-container img {
@@ -156,6 +177,13 @@ body .container .dashboard-content .input-type-bar .image-details-container img 
 @media (max-width: 515px) {
   body .container .dashboard-content .input-type-bar .image-details-container select {
     display: none;
+  }
+  body .container .dashboard-content .input-type-bar .image-details-container img {
+    width: 25px;
+    height: 25px;
+  }
+  body .container .dashboard-content .input-type-bar .image-details-container hr {
+    width: 100%;
   }
 }
 
@@ -171,7 +199,11 @@ body .container .dashboard-content .input-type-bar .image-details-container i {
   color: grey;
 }
 
-body .container .dashboard-content .user-details-container {
+body .container .dashboard-content .user-details {
+  border-bottom: 1px solid gray;
+}
+
+body .container .dashboard-content .user-details .user-details-container {
   width: 80%;
   margin: auto;
   display: -webkit-box;
@@ -184,16 +216,28 @@ body .container .dashboard-content .user-details-container {
 }
 
 @media (max-width: 515px) {
-  body .container .dashboard-content .user-details-container {
+  body .container .dashboard-content .user-details .user-details-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
+    width: 100%;
   }
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 {
+@media (max-width: 767.98px) {
+  body .container .dashboard-content .user-details .user-details-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+}
+
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 {
   width: 70%;
   float: left;
   display: -webkit-box;
@@ -204,16 +248,21 @@ body .container .dashboard-content .user-details-container .user-details-section
           align-items: center;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 i {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 i {
   color: grey;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 .verified-account i {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 p span {
+  font-size: 14px;
+}
+
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 .verified-account i {
   color: #2ae119;
 }
 
 @media (max-width: 515px) {
-  body .container .dashboard-content .user-details-container .user-details-section-1 div {
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-1 div,
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-1 p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -224,63 +273,89 @@ body .container .dashboard-content .user-details-container .user-details-section
   }
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 img {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 img {
   margin-right: 15px;
   border-radius: 100px;
   width: 40px;
   height: 40px;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 h3 {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 h3 {
   margin-bottom: 3px;
 }
 
-@media (max-width: 515px) {
-  body .container .dashboard-content .user-details-container .user-details-section-1 p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (max-width: 991.98px) {
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-1 {
+    width: 60%;
   }
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 p {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 p {
   margin-top: 3px;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 p span {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 p span {
   margin-right: 10px;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-1 p i {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-1 p i {
   margin-right: 5px;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-2 {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-2 {
   width: 30%;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-2 button {
-  padding: 5px 15px;
+body .container .dashboard-content .user-details .user-details-container .user-details-section-2 button {
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid rgba(209, 209, 209, 0.792);
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-2 .add-money {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-2 .add-money {
   margin-right: 10px;
 }
 
-body .container .dashboard-content .user-details-container .user-details-section-2 .send-money {
+body .container .dashboard-content .user-details .user-details-container .user-details-section-2 .send-money {
   background: #036672;
   color: white;
 }
 
-body .container .dashboard-content .overview-container {
+@media (max-width: 991.98px) {
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-2 {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 515px) {
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body .container .dashboard-content .user-details .user-details-container .user-details-section-2 button {
+    padding: 5px 10px;
+  }
+}
+
+body .container .dashboard-content .overview {
   width: 80%;
   margin: auto;
+}
+
+body .container .dashboard-content .overview h4 {
+  margin-bottom: 5px;
+}
+
+body .container .dashboard-content .overview .overview-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,8 +365,8 @@ body .container .dashboard-content .overview-container {
           justify-content: space-between;
 }
 
-@media (max-width: 515px) {
-  body .container .dashboard-content .overview-container {
+@media (max-width: 767.98px) {
+  body .container .dashboard-content .overview .overview-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -303,17 +378,17 @@ body .container .dashboard-content .overview-container {
   }
 }
 
-body .container .dashboard-content .overview-container .overview-container-section {
+body .container .dashboard-content .overview .overview-container .overview-container-section {
   width: 30%;
-  -webkit-box-shadow: 1px 1px 2px 1px #dedede;
-          box-shadow: 1px 1px 2px 1px #dedede;
+  -webkit-box-shadow: 1px 2px 5px 3px #dedede;
+          box-shadow: 1px 2px 5px 3px #dedede;
   border-radius: 10px;
   padding: 5px 0px 5px 15px;
 }
 
-@media (max-width: 515px) {
-  body .container .dashboard-content .overview-container .overview-container-section {
-    width: 100%;
+@media (max-width: 767.98px) {
+  body .container .dashboard-content .overview .overview-container .overview-container-section {
+    width: 60%;
     margin-bottom: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -328,24 +403,40 @@ body .container .dashboard-content .overview-container .overview-container-secti
   }
 }
 
-body .container .dashboard-content .overview-container .overview-container-section .view-all {
+@media (max-width: 575.98px) {
+  body .container .dashboard-content .overview .overview-container .overview-container-section {
+    width: 100%;
+  }
+}
+
+body .container .dashboard-content .overview .overview-container .overview-container-section .view-all {
   color: #036672;
 }
 
-body .container .dashboard-content .overview-container .overview-container-section p {
+body .container .dashboard-content .overview .overview-container .overview-container-section p {
   margin: 5px;
 }
 
-body .container .dashboard-content .overview-container .overview-container-section .overview-icon-container {
+body .container .dashboard-content .overview .overview-container .overview-container-section .overview-icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 30px;
 }
 
-body .container .dashboard-content .overview-container .overview-container-section .overview-icon-container span {
+body .container .dashboard-content .overview .overview-container .overview-container-section .overview-icon-container i {
+  color: gray;
+}
+
+body .container .dashboard-content .overview .overview-container .overview-container-section .overview-icon-container .transaction-statuses {
+  font-size: 12px;
+  color: gray;
+}
+
+body .container .dashboard-content .overview .overview-container .overview-container-section .overview-icon-container span {
   margin-right: 10px;
 }
 
@@ -383,6 +474,27 @@ body .container .dashboard-content .recent-activity table tr th {
 
 body .container .dashboard-content .recent-activity table tr td {
   padding: 10px;
+}
+
+body .container .dashboard-content .recent-activity table tr .success span {
+  background: lightgreen;
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: #036672;
+}
+
+body .container .dashboard-content .recent-activity table tr .processing span {
+  background: lightgoldenrodyellow;
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: #036672;
+}
+
+body .container .dashboard-content .recent-activity table tr .failed span {
+  background: lightgray;
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: #036672;
 }
 
 body input:focus-visible {
