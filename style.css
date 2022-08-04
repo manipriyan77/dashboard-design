@@ -27,13 +27,19 @@ body .container .side-nav {
 
 @media (max-width: 515px) {
   body .container .side-nav {
-    height: 100%;
+    height: 285vh;
     overflow-y: scroll;
   }
 }
 
 body .container .side-nav i {
   color: #61cfdb;
+}
+
+@media (max-width: 768px) {
+  body .container .side-nav {
+    height: 245vh;
+  }
 }
 
 @media (min-width: 769px) {
